@@ -22,7 +22,7 @@ void usage()
 void version()
 {
 	printf("版权所有 (C) 2018 Mentent.保留所有权利。\n"); 
-	printf("荷兰豆实用程序 %s,版本: %s\n",PROGRAM_NAME,PACKAGE_VERSION);
+	printf("Base-utils %s,版本: %s\n",PROGRAM_NAME,PACKAGE_VERSION);
 }
 
 int main(int argc,char *argv [])
@@ -70,8 +70,8 @@ int main(int argc,char *argv [])
 	
 	if((fp = fopen(argv[1],"r")) == NULL)
 	{
-		printf("在打开文件 %s 时发生了错误。\n",argv[1]);
-		printf("附加 --help 参数获取帮助。\n");
+		printf("打开文件 %s 失败。\n",argv[1]);
+		printf("调用 --help 参数获取帮助。\n");
 		exit(0);
 	} 
 	

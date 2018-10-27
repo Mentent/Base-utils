@@ -4,16 +4,26 @@
  * Copyright (C) 2018 Mentent,all rights reserved.
  */
  
+#include "../config.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
 
 #define PROGRAM_NAME "echo"
-#define VERSION "2.2.1.20180928.RELEASE"
 
-void usage();
-void version();
+void usage()
+{
+	fprintf(stdout,"\
+用法: %s [选项] \"字符串\"\n\
+将字符串再次输出到标准输出上。\n",PROGRAM_NAME);
+}
+
+void version()
+{
+	printf("版权所有 (C) 2018 Mentent.保留所有权利。\n"); 
+	printf("Base-utils %s,版本: %s\n",PROGRAM_NAME,PACKAGE_VERSION);
+}
 
 int main(int argc,char *argv []){
 	if( argc == 2)
@@ -39,16 +49,4 @@ int main(int argc,char *argv []){
 		i ++;
 	}
 	return 0;
-}
-
-void usage(){
-	fprintf(stdout,"\
-用法: %s [选项] \"字符串\"\n\
-将字符串再次输出到标准输出上。\n",PROGRAM_NAME);
-}
-
-void version(){
-	printf("版权所有 (C) 2018 Mentent.保留所有权利。\n"); 
-	printf("荷兰豆实用程序 %s,版本: %s\n",PROGRAM_NAME,VERSION);
-	printf("使用 MinGW-W64 项目构建。\n");
 }
