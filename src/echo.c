@@ -1,0 +1,54 @@
+/*
+ * echo.c - 2018/09/22 - 荷兰豆实用程序 
+ * 版权所有 (C) 2018 Mentent,保留所有权利。 
+ * Copyright (C) 2018 Mentent,all rights reserved.
+ */
+ 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+
+#define PROGRAM_NAME "echo"
+#define VERSION "2.2.1.20180928.RELEASE"
+
+void usage();
+void version();
+
+int main(int argc,char *argv []){
+	if( argc == 2)
+	//无 if 的情况下会导致strcmp函数访问不存在的argv[1]而触发 Segmentation Fault。
+	//使用 while 可能会因无符合条件的字符串而陷入死循环 
+	{
+		//利用 strcmp 函数处理长参数 ( string.h )
+		if( strcmp(argv[1],"--version") == 0){
+			version();
+			exit(0);// stdlib.h
+		}
+		if( strcmp(argv[1],"--help") == 0){
+			usage();
+			exit(0);
+		}
+	}
+
+	int i;
+	i = 1;
+	
+	while(i <= argc){
+		printf("%s\n",argv[i]);
+		i ++;
+	}
+	return 0;
+}
+
+void usage(){
+	fprintf(stdout,"\
+用法: %s [选项] \"字符串\"\n\
+将字符串再次输出到标准输出上。\n",PROGRAM_NAME);
+}
+
+void version(){
+	printf("版权所有 (C) 2018 Mentent.保留所有权利。\n"); 
+	printf("荷兰豆实用程序 %s,版本: %s\n",PROGRAM_NAME,VERSION);
+	printf("使用 MinGW-W64 项目构建。\n");
+}
