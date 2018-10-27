@@ -1,6 +1,7 @@
 # Base-utils
 
-[![Platform](https://img.shields.io/badge/Platform-Unix-blue.svg)](https://travis-ci.org/Mentent/Base-utils) 
+<img src="https://img.shields.io/badge/MinGW-Passing-brightgreen.svg alt="MinGW Passing."/></a>
+<img src="https://img.shields.io/badge/MSVC-Passing-red.svg alt="MSVC Passing."/></a>
 
 # About
 
