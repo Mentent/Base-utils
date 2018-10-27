@@ -12,7 +12,9 @@ include: &toolchain_linux_386
   dist: trusty
   addons:
     apt:
-      update: true
+      packages:
+        - gcc-multilib
+        - g++-multilib
 
 
 include: &toolchain_osx_amd64
