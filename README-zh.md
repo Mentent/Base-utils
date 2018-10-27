@@ -1,4 +1,7 @@
 # Base-utils
+
+[![Build Status](https://travis-ci.org/Mentent/Base-utils.svg?branch=master)](https://travis-ci.org/Mentent/Base-utils)
+
 # 简介
 
 这个项目是我在闲暇时对于 Unix 常用命令的 C 语言实现。
