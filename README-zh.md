@@ -1,7 +1,7 @@
 # Base-utils
 
-![MinGW Passing.]("https://img.shields.io/badge/MinGW-Passing-brightgreen.svg")
-![MSVC Passing.]("https://img.shields.io/badge/MSVC-Passing-red.svg)
+![MinGW Passing.](https://img.shields.io/badge/MinGW-Passing-brightgreen.svg)
+![MSVC Passing.](https://img.shields.io/badge/MSVC-Passing-red.svg)
 
 # 简介
 
