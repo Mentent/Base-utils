@@ -4,7 +4,7 @@
  * Copyright (C) 2018 Mentent,all rights reserved
  */
  
-#include "../config.h"
+#include <config.h>
 #include <time.h>
 #include <stdio.h>
 #include <stdlib.h>

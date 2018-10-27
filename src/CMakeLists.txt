@@ -10,7 +10,7 @@ set(SRCS
 	timenow.c
 ​	)
 
-add_executable(cat cat.c)
-add_executable(echo echo.c)
-add_executable(timenow timenow.c)
-add_executable(yes yes.c)
+add_executable(cat cat.c getopt.c)
+add_executable(echo echo.c getopt.c)
+add_executable(timenow timenow.c getopt.c)
+add_executable(yes yes.c getopt.c)

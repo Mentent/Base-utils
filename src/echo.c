@@ -1,16 +1,17 @@
 /*
- * echo.c - 2018/09/22 - 荷兰豆实用程序 
+ * echo.c - 2018/10/27 - 荷兰豆实用程序 
  * 版权所有 (C) 2018 Mentent,保留所有权利。 
  * Copyright (C) 2018 Mentent,all rights reserved.
  */
- 
-#include "../config.h"
+
+#include <extra.h>
 #include <stdio.h>
+#include <config.h>
 #include <stdlib.h>
 #include <string.h>
-#include <unistd.h>
 
 #define PROGRAM_NAME "echo"
+
 
 void usage()
 {
@@ -25,7 +26,8 @@ void version()
 	printf("Base-utils %s,版本: %s\n",PROGRAM_NAME,PACKAGE_VERSION);
 }
 
-int main(int argc,char *argv []){
+int main(int argc,char *argv [])
+{
 	if( argc == 2)
 	//无 if 的情况下会导致strcmp函数访问不存在的argv[1]而触发 Segmentation Fault。
 	//使用 while 可能会因无符合条件的字符串而陷入死循环 
@@ -40,7 +42,22 @@ int main(int argc,char *argv []){
 			exit(0);
 		}
 	}
-
+	
+	int ch;
+	//使用 getopt 函数接收参数 ( unistd.h ) 
+	while ((ch = getopt(argc, argv, "hv")) != -1)
+		switch (ch) {
+		case 'h':
+			usage();
+			exit(0);
+		case 'v':
+			version();
+			exit(0);
+		default:
+			usage();
+			exit(1);
+		}
+		
 	int i;
 	i = 1;
 	

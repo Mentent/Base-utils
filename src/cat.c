@@ -1,14 +1,14 @@
 /*
- * cat.c - 2018/10/26 - 荷兰豆实用程序 
+ * cat.c - 2018/10/27 - 荷兰豆实用程序 
  * 版权所有 (C) 2018 Mentent,保留所有权利。 
  * Copyright (C) 2018 Mentent,all rights reserved.
  */
- 
-#include "../config.h"	//自2.2版本起从configure.ac脚本中获取版本号
+
+#include <extra.h>
 #include <stdio.h>
+#include <config.h>
 #include <stdlib.h>
 #include <string.h>
-#include <unistd.h>
 
 #define PROGRAM_NAME "cat"
 
@@ -49,6 +49,7 @@ int main(int argc,char *argv [])
 			exit(0);
 		}
 	}
+
 	
 	int ch;
 	//使用 getopt 函数接收参数 ( unistd.h ) 
@@ -64,7 +65,7 @@ int main(int argc,char *argv [])
 			usage();
 			exit(1);
 		}
-		
+
 	FILE *fp;
 	unsigned long count = 0;
 	
