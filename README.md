@@ -10,7 +10,7 @@ Base-utils is a colletion of Unix utilities,which is written on my own in my spa
 Commands included:
 
 
-| cat  | echo | timenow |      |
+| cat  | echo | timenow | yes  |
 | ---- | ---- | ------- | ---- |
 |      |      |         |      |
 
