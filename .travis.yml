@@ -12,8 +12,7 @@ include: &toolchain_linux_386
   dist: trusty
   addons:
     apt:
-      packages:
-        - gcc-multilib
+      update: true
 
 
 include: &toolchain_osx_amd64
@@ -56,8 +55,9 @@ script:
   - popd
 
 after_success:
-  - ls -lR build/out
-  - file build/out/test
+  - ls -lR build/bin
+  - file build/out/cat
+  - file build/out/echo
   - export platform="$TRAVIS_OS_NAME"
   - if [[ "x${TRAVIS_TAG}" != "x" ]]; then export version=${TRAVIS_TAG}; else export version=${TRAVIS_BRANCH}; fi
   - export artifact=${version}-${platform}-${arch}-${linking}
