@@ -1,6 +1,5 @@
 # Base-utils
 
-[![Build Status](https://travis-ci.org/Mentent/Base-utils.svg?branch=master)](https://travis-ci.org/Mentent/Base-utils) 
 [![Platform](https://img.shields.io/badge/Platform-Unix-blue.svg)](https://travis-ci.org/Mentent/Base-utils) 
 
 # About
