@@ -59,14 +59,12 @@ after_success:
   - ls -lR build/out
   - file build/out/test
   - export platform="$TRAVIS_OS_NAME"
-  - if [[ "$TRAVIS_OS_NAME" == "osx"   ]]; then cp ui.h ui_darwin.h build/out/; export platform=darwin; fi
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then cp ui.h ui_unix.h   build/out/; fi
   - if [[ "x${TRAVIS_TAG}" != "x" ]]; then export version=${TRAVIS_TAG}; else export version=${TRAVIS_BRANCH}; fi
   - export artifact=${version}-${platform}-${arch}-${linking}
   - echo ${artifact}
   - pushd build/out
   - # TODO do not include symlinks in the archive
-  - tar -czvf libui-${artifact}.tgz *
+  - tar -czvf base-utils-${artifact}.tar.gz *
   - popd
 
 deploy:
