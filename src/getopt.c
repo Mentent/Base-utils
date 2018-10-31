@@ -14,7 +14,7 @@ int getopt(int argc, char *argv[], const char *optstring)
 	optind = (optind == 0 ? 1 : optind);
 
 	if ((argv[optind] != NULL) && (strcmp(argv[optind], "--")) && (argv[optind][0] == '-')) {
-		if ((optc = argv[optind][i]) != '\0') 
+		if ((optc = argv[optind][i]) != '\0')
 		{
 			for (j = 0; optstring[j] != '\0'; j++)
 			{
@@ -22,11 +22,11 @@ int getopt(int argc, char *argv[], const char *optstring)
 					break;
 			}
 			if (optstring[j] == '\0') /* invalid argument */
-			{ 
+			{
 				optopt = argv[optind][i];
 				if (optstring[0] != ':' && opterr != 0)
 					printf("参数 %c 不正确。\n", optopt);
-				if (argv[optind][i + 1] == '\0') 
+				if (argv[optind][i + 1] == '\0')
 				{
 					i = 1;
 					optind++;
@@ -39,11 +39,11 @@ int getopt(int argc, char *argv[], const char *optstring)
 			{ /* hav argument */
 				if (argv[optind][i + 1] == '\0'
 					&& ((argv[optind + 1] == NULL)
-						|| argv[optind + 1][0] == '-')) 
+						|| argv[optind + 1][0] == '-'))
 				{
 					if (optstring[0] != ':' &&  opterr != 0)
 						printf("参数语法不正确。\n");
-					if (argv[optind][i + 1] == '\0') 
+					if (argv[optind][i + 1] == '\0')
 					{
 						i = 1;
 						optind++;
@@ -53,11 +53,11 @@ int getopt(int argc, char *argv[], const char *optstring)
 					return ':';
 				}
 
-				if (argv[optind][i + 1] == '\0') 
+				if (argv[optind][i + 1] == '\0')
 				{
 					optarg = argv[++optind];
 				}
-				else 
+				else
 				{
 					optarg = &argv[optind][i + 1];
 				}
@@ -75,6 +75,6 @@ int getopt(int argc, char *argv[], const char *optstring)
 				i++;
 			return optc;
 		}
-	} 
+	}
 	return 1;
 }
