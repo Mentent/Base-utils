@@ -3,14 +3,14 @@
 
 cmake_minimum_required(VERSION 3.0.0)
 
-set(SRCS 
+set(SRCS
 ​	cat.c
 	yes.c
 ​	echo.c
 	timenow.c
 ​	)
 
-add_executable(cat cat.c getopt.c)
-add_executable(echo echo.c getopt.c)
-add_executable(timenow timenow.c getopt.c)
-add_executable(yes yes.c getopt.c)
+add_executable(cat cat.c)
+add_executable(echo echo.c)
+add_executable(timenow timenow.c)
+add_executable(yes yes.c)
