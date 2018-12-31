@@ -8,16 +8,16 @@
 #include <stdio.h>
 
 #define PROGRAM_NAME "yes"
+#define HELP_MESSAGE ""PROGRAM_NAME" "VER_NUM" "VER_TAG"\n\
+版权所有 (C) 2018 Mentent.保留所有权利.\n\
+用法:\n\
+  --help,-h		显示此帮助文件。\n\
+  --version,-v		显示程序版本信息。\n\
+请汇报 Bugs 到 "DEVELOPER_EMAIL""
 
 void usage()
 {
-	fprintf(stdout,"\
-用法: %s [选项] \"字符串\"\n\
-不断输出\"y\"，直到程序终止。\n\
-选项:\n\
-    --version,-v       打印程序版本信息。\n\
-    --help,-h          打印此帮助文件并退出。\n\n\
-若发现 Bug 或有改进建议与意见,请提交给我们: %s \n",PROGRAM_NAME,DEVELOPER_EMAIL);
+	fprintf(stdout,HELP_MESSAGE);
 }
 
 void version()

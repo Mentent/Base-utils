@@ -15,7 +15,7 @@
 用法:\n\
   --help,-h		显示此帮助文件。\n\
   --version,-v		显示程序版本信息。\n\
-请汇报 Bugs 到 <Mentent@qq.com>"
+请汇报 Bugs 到 "DEVELOPER_EMAIL""
 
 void usage()
 {
