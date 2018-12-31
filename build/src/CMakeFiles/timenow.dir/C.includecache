@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/config.h
+
+D:/Documents/Base-utils/src/timenow.c
+config.h
+-
+time.h
+-
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+

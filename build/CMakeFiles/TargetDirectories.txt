@@ -1,0 +1,8 @@
+D:/Documents/Base-utils/build/CMakeFiles/edit_cache.dir
+D:/Documents/Base-utils/build/CMakeFiles/rebuild_cache.dir
+D:/Documents/Base-utils/build/src/CMakeFiles/cat.dir
+D:/Documents/Base-utils/build/src/CMakeFiles/timenow.dir
+D:/Documents/Base-utils/build/src/CMakeFiles/echo.dir
+D:/Documents/Base-utils/build/src/CMakeFiles/edit_cache.dir
+D:/Documents/Base-utils/build/src/CMakeFiles/yes.dir
+D:/Documents/Base-utils/build/src/CMakeFiles/rebuild_cache.dir

@@ -50,12 +50,12 @@ int main(int argc,char *argv [])
 		}
 	}
 
-	int i;
-	i = 1;
+	int j;
+	j = 1;
 
-	while(i <= argc){
-		printf("%s\n",argv[i]);
-		i ++;
+	while(j <= argc){
+		printf("%s\n",argv[j]);
+		j ++;
 	}
 	return 0;
 }
