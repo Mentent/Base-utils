@@ -2,9 +2,11 @@
 
 All changes to this project will be documented in this file.
 
-## Current Version [ 2.3 ] - 2018/10/27
+## Current Version [ 2.4 ] - 2018/12/31
 
-###Changed
+##  [ 2.3 ] - 2018/10/27
+
+### Changed
 
 - Added "yes" and "timenow".
 - For compatibility with Windows, no longer use unistd.h.

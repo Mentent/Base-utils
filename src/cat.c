@@ -1,6 +1,5 @@
 /*
- * cat.c - 2018/10/27 - 荷兰豆实用程序
- * 版权所有 (C) 2018 Mentent,保留所有权利。
+ * cat.c - 2018/10/27
  * Copyright (C) 2018 Mentent,all rights reserved.
  */
 
@@ -12,6 +11,7 @@
 #define PROGRAM_NAME "cat"
 #define HELP_MESSAGE ""PROGRAM_NAME" "VER_NUM" "VER_TAG"\n\
 版权所有 (C) 2018 Mentent.保留所有权利.\n\
+连接文件到标准输出。\n\
 用法:\n\
   --help,-h		显示此帮助文件。\n\
   --version,-v		显示程序版本信息。\n\
