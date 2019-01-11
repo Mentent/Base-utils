@@ -1,7 +1,5 @@
-/*
- * timenow.c - 2018/10/27
- * Copyright (C) 2018 Mentent,all rights reserved
- */
+ï»¿// timenow.c - 2018/10/27
+// Copyright (C) 2018,2019 Mentent,all rights reserved
 
 #include <config.h>
 #include <time.h>
@@ -11,12 +9,12 @@
 
 #define PROGRAM_NAME "timenow"
 #define HELP_MESSAGE ""PROGRAM_NAME" "VER_NUM" "VER_TAG"\n\
-°æÈ¨ËùÓĞ (C) 2018 Mentent.±£ÁôËùÓĞÈ¨Àû.\n\
-ÏÔÊ¾µ±Ç°Ê±¼ä¡£\n\
-ÓÃ·¨:\n\
-  --help,-h		ÏÔÊ¾´Ë°ïÖúÎÄ¼ş¡£\n\
-  --version,-v		ÏÔÊ¾³ÌĞò°æ±¾ĞÅÏ¢¡£\n\
-Çë»ã±¨ Bugs µ½ "DEVELOPER_EMAIL""
+ç‰ˆæƒæ‰€æœ‰ (C) 2018,2019 Mentent.ä¿ç•™æ‰€æœ‰æƒåˆ©.\n\
+æ˜¾ç¤ºå½“å‰æ—¶é—´ã€‚\n\
+ç”¨æ³•:\n\
+  --help,-h		æ˜¾ç¤ºæ­¤å¸®åŠ©æ–‡ä»¶ã€‚\n\
+  --version,-v		æ˜¾ç¤ºç¨‹åºç‰ˆæœ¬ä¿¡æ¯ã€‚\n\
+è¯·æ±‡æŠ¥ Bugs åˆ° "DEVELOPER_EMAIL"\n"
 
 void usage(){
 	fprintf(stdout,HELP_MESSAGE);
@@ -24,17 +22,17 @@ void usage(){
 
 void version()
 {
-	printf("°æÈ¨ËùÓĞ (C) 2018 Mentent.±£ÁôËùÓĞÈ¨Àû¡£\n");
-	printf("Baseutils %s,°æ±¾: %s\n",PROGRAM_NAME,PACKAGE_VERSION);
+	printf("ç‰ˆæƒæ‰€æœ‰ (C) 2018,2019 Mentent.ä¿ç•™æ‰€æœ‰æƒåˆ©ã€‚\n");
+	printf("Baseutils %s,ç‰ˆæœ¬: %s\n",PROGRAM_NAME,PACKAGE_VERSION);
 }
 
 int main(int argc,char *argv [])
 {
 	if( argc == 2)
-	//ÎŞ if µÄÇé¿öÏÂ»áµ¼ÖÂstrcmpº¯Êı·ÃÎÊ²»´æÔÚµÄargv[1]¶ø´¥·¢ Segmentation Fault¡£
-	//Ê¹ÓÃ while ¿ÉÄÜ»áÒòÎŞ·ûºÏÌõ¼şµÄ×Ö·û´®¶øÏİÈëËÀÑ­»·
+	//æ—  if çš„æƒ…å†µä¸‹ä¼šå¯¼è‡´strcmpå‡½æ•°è®¿é—®ä¸å­˜åœ¨çš„argv[1]è€Œè§¦å‘ Segmentation Faultã€‚
+	//ä½¿ç”¨ while å¯èƒ½ä¼šå› æ— ç¬¦åˆæ¡ä»¶çš„å­—ç¬¦ä¸²è€Œé™·å…¥æ­»å¾ªç¯
 	{
-		//ÀûÓÃ strcmp º¯Êı´¦Àí³¤²ÎÊı ( string.h )
+		//åˆ©ç”¨ strcmp å‡½æ•°å¤„ç†é•¿å‚æ•° ( string.h )
 		if( strcmp(argv[1],"--version") == 0){
 			version();
 			exit(0);// stdlib.h
@@ -50,7 +48,7 @@ int main(int argc,char *argv [])
 	timer = time(NULL);
 	tblock = localtime(&timer);
 
-	printf("µ±Ç°Ê±¼ä: %s",asctime(tblock));
+	printf("å½“å‰æ—¶é—´: %s",asctime(tblock));
 
 	return 0;
 }

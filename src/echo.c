@@ -1,7 +1,5 @@
-/*
- * echo.c - 2018/10/27
- * Copyright (C) 2018 Mentent,all rights reserved.
- */
+ï»¿// echo.c - 2018/10/27
+// Copyright (C) 2018,2019 Mentent,all rights reserved
 
 #include <stdio.h>
 #include <config.h>
@@ -10,12 +8,12 @@
 
 #define PROGRAM_NAME "echo"
 #define HELP_MESSAGE ""PROGRAM_NAME" "VER_NUM" "VER_TAG"\n\
-°æÈ¨ËùÓĞ (C) 2018 Mentent.±£ÁôËùÓĞÈ¨Àû.\n\
-ÖØ¸´Êä³ö¡£\n\
-ÓÃ·¨:\n\
-  --help,-h		ÏÔÊ¾´Ë°ïÖúÎÄ¼ş¡£\n\
-  --version,-v		ÏÔÊ¾³ÌĞò°æ±¾ĞÅÏ¢¡£\n\
-Çë»ã±¨ Bugs µ½ "DEVELOPER_EMAIL""
+ç‰ˆæƒæ‰€æœ‰ (C) 2018,2019 Mentent.ä¿ç•™æ‰€æœ‰æƒåˆ©.\n\
+é‡å¤è¾“å‡ºã€‚\n\
+ç”¨æ³•:\n\
+  --help,-h		æ˜¾ç¤ºæ­¤å¸®åŠ©æ–‡ä»¶ã€‚\n\
+  --version,-v		æ˜¾ç¤ºç¨‹åºç‰ˆæœ¬ä¿¡æ¯ã€‚\n\
+è¯·æ±‡æŠ¥ Bugs åˆ° "DEVELOPER_EMAIL"\n"
 void usage()
 {
 	fprintf(stdout,HELP_MESSAGE);
@@ -23,8 +21,8 @@ void usage()
 
 void version()
 {
-	printf("°æÈ¨ËùÓĞ (C) 2018 Mentent.±£ÁôËùÓĞÈ¨Àû¡£\n");
-	printf("Base-utils %s,°æ±¾: %s\n",PROGRAM_NAME,PACKAGE_VERSION);
+	printf("ç‰ˆæƒæ‰€æœ‰ (C) 2018,2019 Mentent.ä¿ç•™æ‰€æœ‰æƒåˆ©ã€‚\n");
+	printf("Base-utils %s,ç‰ˆæœ¬: %s\n",PROGRAM_NAME,PACKAGE_VERSION);
 }
 
 int main(int argc,char *argv [])
@@ -32,7 +30,7 @@ int main(int argc,char *argv [])
 	int i;
 	if( argc == 2)
 	{
-		//ÀûÓÃ strcmp º¯ÊıºÍÂß¼­»ò´¦Àí³¤²ÎÊı (string.h)
+		//åˆ©ç”¨ strcmp å‡½æ•°å’Œé€»è¾‘æˆ–å¤„ç†é•¿å‚æ•° (string.h)
 		if(strcmp(argv[1],"--version") == 0 || strcmp(argv[1],"-v") == 0)
 		{
 			version();
@@ -43,7 +41,7 @@ int main(int argc,char *argv [])
 			usage();
 			exit(0);
 		}
-		else//·ÀÖ¹¿Õ²ÎÊı
+		else//é˜²æ­¢ç©ºå‚æ•°
 		{
 			i = 1100;
 		}

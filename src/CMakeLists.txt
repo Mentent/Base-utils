@@ -1,7 +1,4 @@
-﻿# Distributed under Apache License 2.0.  See accompanying
-# file LICENSE for details.
-
-cmake_minimum_required(VERSION 3.0.0)
+﻿cmake_minimum_required(VERSION 3.0.0)
 
 set(SRCS
 ​	cat.c

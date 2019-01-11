@@ -1,7 +1,5 @@
-/*
- * cat.c - 2018/10/27
- * Copyright (C) 2018 Mentent,all rights reserved.
- */
+ï»¿// cat.c - 2018/10/27
+// Copyright (C) 2018,2019 Mentent,all rights reserved.
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -10,12 +8,12 @@
 
 #define PROGRAM_NAME "cat"
 #define HELP_MESSAGE ""PROGRAM_NAME" "VER_NUM" "VER_TAG"\n\
-°æÈ¨ËùÓĞ (C) 2018 Mentent.±£ÁôËùÓĞÈ¨Àû.\n\
-Á¬½ÓÎÄ¼şµ½±ê×¼Êä³ö¡£\n\
-ÓÃ·¨:\n\
-  --help,-h		ÏÔÊ¾´Ë°ïÖúÎÄ¼ş¡£\n\
-  --version,-v		ÏÔÊ¾³ÌĞò°æ±¾ĞÅÏ¢¡£\n\
-Çë»ã±¨ Bugs µ½ "DEVELOPER_EMAIL""
+ç‰ˆæƒæ‰€æœ‰ (C) 2018,2019 Mentent.ä¿ç•™æ‰€æœ‰æƒåˆ©.\n\
+è¿æ¥æ–‡ä»¶åˆ°æ ‡å‡†è¾“å‡ºã€‚\n\
+ç”¨æ³•:\n\
+  --help,-h		æ˜¾ç¤ºæ­¤å¸®åŠ©æ–‡ä»¶ã€‚\n\
+  --version,-v		æ˜¾ç¤ºç¨‹åºç‰ˆæœ¬ä¿¡æ¯ã€‚\n\
+è¯·æ±‡æŠ¥ Bugs åˆ° "DEVELOPER_EMAIL"\n"
 
 void usage()
 {
@@ -24,22 +22,22 @@ void usage()
 
 void version()
 {
-	printf("Base-utils %s,°æ±¾: %s\n",PROGRAM_NAME,VER_NUM);
-	printf("°æÈ¨ËùÓĞ (C) 2018 Mentent.±£ÁôËùÓĞÈ¨Àû¡£\n");
+	printf("Base-utils %s,ç‰ˆæœ¬: %s\n",PROGRAM_NAME,VER_NUM);
+	printf("ç‰ˆæƒæ‰€æœ‰ (C) 2018,2019 Mentent.ä¿ç•™æ‰€æœ‰æƒåˆ©ã€‚\n");
 }
 
 int main(int argc,char *argv [])
 {
-	if( argc == 1) //·ÀÖ¹ÓÃ»§ÊäÈë²ÎÊı³ö´íÊ±³ÌĞòÈÔÈ»¼ÌĞøÍÆ½ø
+	if( argc == 1) //é˜²æ­¢ç”¨æˆ·è¾“å…¥å‚æ•°å‡ºé”™æ—¶ç¨‹åºä»ç„¶ç»§ç»­æ¨è¿›
 	{
-		printf("²ÎÊı¹ıÉÙ¡£\n");
+		printf("å‚æ•°è¿‡å°‘ã€‚\n");
 		exit(1);
 	}
 
 	int i;
     if( argc == 2)
     {
-        //ÀûÓÃ strcmp º¯ÊıºÍÂß¼­»ò´¦Àí³¤²ÎÊı (string.h)
+        //åˆ©ç”¨ strcmp å‡½æ•°å’Œé€»è¾‘æˆ–å¤„ç†é•¿å‚æ•° (string.h)
         if(strcmp(argv[1],"--version") == 0 || strcmp(argv[1],"-v") == 0)
         {
             version();
@@ -50,7 +48,7 @@ int main(int argc,char *argv [])
             usage();
             exit(0);
         }
-        else//·ÀÖ¹¿Õ²ÎÊı
+        else//é˜²æ­¢ç©ºå‚æ•°
         {
             i = 1100;
         }
@@ -63,18 +61,18 @@ int main(int argc,char *argv [])
 
 	if((fp = fopen(argv[1],"r")) == NULL)
 	{
-		printf("´ò¿ªÎÄ¼ş %s Ê§°Ü¡£\n",argv[1]);
-		printf("µ÷ÓÃ --help ²ÎÊı»ñÈ¡°ïÖú¡£\n");
+		printf("æ‰“å¼€æ–‡ä»¶ %s å¤±è´¥ã€‚\n",argv[1]);
+		printf("è°ƒç”¨ --help å‚æ•°è·å–å¸®åŠ©ã€‚\n");
 		exit(0);
 	}
 
-	while((ch = getc(fp)) != EOF)//µ±¶ÁÈ¡µ½ End Of File Ê±Í£Ö¹
+	while((ch = getc(fp)) != EOF)//å½“è¯»å–åˆ° End Of File æ—¶åœæ­¢
 	{
 		putc(ch,stdout);
 		count ++;
 	}
-	fclose(fp);//fclose º¯Êı¹Ø±ÕÎÄ¼ş
-	printf("ÎÄ¼ş %s ÖĞº¬ÓĞ %lu ¸ö×Ö·û¡£\n",argv[1],count);//¼ÆÊıÆ÷
+	fclose(fp);//fclose å‡½æ•°å…³é—­æ–‡ä»¶
+	printf("æ–‡ä»¶ %s ä¸­å«æœ‰ %lu ä¸ªå­—ç¬¦ã€‚\n",argv[1],count);//è®¡æ•°å™¨
 
 	return 0;
 }
