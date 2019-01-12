@@ -4,15 +4,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "../include/config.h"
+#include <config.h>
 
 #define PROGRAM_NAME "cat"
-#define HELP_MESSAGE ""PROGRAM_NAME" "VER_NUM" "VER_TAG"\n\
-版权所有 (C) 2018,2019 Mentent.保留所有权利.\n\
+#define HELP_MESSAGE "用法："PROGRAM_NAME" [选项] [文件名]\n\
 连接文件到标准输出。\n\
-用法:\n\
+选项:\n\
   --help,-h		显示此帮助文件。\n\
   --version,-v		显示程序版本信息。\n\
+\
+版权所有 (C) 2018,2019 Mentent.保留所有权利.\n\
 请汇报 Bugs 到 "DEVELOPER_EMAIL"\n"
 
 void usage()
@@ -22,38 +23,30 @@ void usage()
 
 void version()
 {
-	printf("Base-utils %s,版本: %s\n",PROGRAM_NAME,VER_NUM);
-	printf("版权所有 (C) 2018,2019 Mentent.保留所有权利。\n");
+	printf("Base-utils %s %s %s\n",PROGRAM_NAME,VER_NUM,VER_TAG);
 }
 
 int main(int argc,char *argv [])
 {
-	if( argc == 1) //防止用户输入参数出错时程序仍然继续推进
+	if( argc == 1)
 	{
 		printf("参数过少。\n");
 		exit(1);
 	}
-
-	int i;
-    if( argc == 2)
-    {
-        //利用 strcmp 函数和逻辑或处理长参数 (string.h)
-        if(strcmp(argv[1],"--version") == 0 || strcmp(argv[1],"-v") == 0)
-        {
-            version();
-            exit(0);
-        }
-        if(strcmp(argv[1],"--help") == 0 || strcmp(argv[1],"-h") == 0)
-        {
-            usage();
-            exit(0);
-        }
-        else//防止空参数
-        {
-            i = 1100;
-        }
-    }
-
+	if( argc == 2)
+	{
+		if(strcmp(argv[1],"--version") == 0 || strcmp(argv[1],"-v") == 0 || strcmp(argv[1],"--v") == 0)
+		{
+			version();
+			exit(0);
+		}
+		if(strcmp(argv[1],"--help") == 0 || strcmp(argv[1],"-h") == 0 || strcmp(argv[1],"--h") == 0)
+		{
+			usage();
+			exit(0);
+		}
+		else{}
+	}
 
 	int ch;
 	FILE *fp;
