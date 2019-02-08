@@ -1,9 +1,0 @@
-/home/mentent/Base-utils/build/CMakeFiles/rebuild_cache.dir
-/home/mentent/Base-utils/build/CMakeFiles/edit_cache.dir
-/home/mentent/Base-utils/build/src/CMakeFiles/rebuild_cache.dir
-/home/mentent/Base-utils/build/src/CMakeFiles/cat.dir
-/home/mentent/Base-utils/build/src/CMakeFiles/sleep.dir
-/home/mentent/Base-utils/build/src/CMakeFiles/yes.dir
-/home/mentent/Base-utils/build/src/CMakeFiles/edit_cache.dir
-/home/mentent/Base-utils/build/src/CMakeFiles/echo.dir
-/home/mentent/Base-utils/build/src/CMakeFiles/timenow.dir
