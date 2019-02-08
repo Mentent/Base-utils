@@ -1,32 +1,36 @@
 # ChangeLog
 
-All changes to this project will be documented in this file.
+## 当前版本 [2.4.3] - 2019/02/08
 
-## Current Version [ 2.4 ] - 2018/12/31
+### 更改
+- 添加了sleep命令
+- yes现在可以接受参数了
+- 整理了源码
 
-##  [ 2.3 ] - 2018/10/27
+#### 已知问题
+- sleep不能暂停小数单位秒
 
-### Changed
+##  [2.3] - 2018/10/27
 
-- Added "yes" and "timenow".
-- For compatibility with Windows, no longer use unistd.h.
+### 更改
 
-### Known Bugs
+- 添加了yes，timenow命令。
+- 删除unistd.h以兼容Windows。
 
-- When using our `getopt()`, "cat" can't use. 
+### 已知问题
 
-##  [ 2.2 ] - 2018/10/27
+- cat会与getopt()冲突。
 
-### Changed
+##  [2.2] - 2018/10/27
 
-- Using Cmake as the project generation tool.
-- `PACKAGE_VERSION` now is placed in config.h.
-- Now the project is under Apache License 2.0.
+### 更改
 
-## Alpha Version [ 2.0 ] - 2018/09/27
-### Improved & Fixed
-- cat and echo now can process long options like `--version` and `--help` and no longer crash when missing agreements.
+- 使用了Cmake作为生成工具。
+- 程序信息放置于 config.h。
+- 换用了 Apache License 2.0 许可证。
 
-## Internal Version [ 1.9 ] - 2018/08
-- The project was founded.
+## [2.0] - 2018/09/27
+### 更改
+- cat，echo可以接受长参数了。
 
+## [ 1.9 ] - 2018/08
